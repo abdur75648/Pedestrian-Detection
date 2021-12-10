@@ -4,7 +4,7 @@ Given an input image which may contain multiple pedestrians, a pedestrian detect
 
 This repo uses OpenCV to do template tracking using 2 methods:
 * ***HoG Method:***
-  ** Firstly, we use a pretrained HoG detector (trained on the INRIA dataset as per the original paper [Histograms of Oriented Gradients for Human Detection](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=1467360)). For this, we use OpenCV’s HOGDescriptor() with getDefaultPeopleDetector() [link](https://docs.opencv.org/4.5.3/d5/d33/structcv_1_1HOGDescriptor.html#a9c7a0b2aa72cf39b4b32b3eddea78203)
+  - Firstly, we use a pretrained HoG detector (trained on the INRIA dataset as per the original paper [Histograms of Oriented Gradients for Human Detection](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=1467360)). For this, we use OpenCV’s HOGDescriptor() with getDefaultPeopleDetector() [link](https://docs.opencv.org/4.5.3/d5/d33/structcv_1_1HOGDescriptor.html#a9c7a0b2aa72cf39b4b32b3eddea78203)
 
 * ***Faster-RCNN Method:*** This is one of the methods based on the optical flow measurement
 
