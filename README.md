@@ -4,7 +4,7 @@ Given an input image which may contain multiple pedestrians, a pedestrian detect
 
 This repo uses OpenCV to do template tracking using 2 methods:
 * ***HoG Method:***
-  - Firstly, we use a pretrained HoG detector (trained on the INRIA dataset as per the original paper [Histograms of Oriented Gradients for Human Detection](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=1467360)). For this, we use OpenCV’s HOGDescriptor() with getDefaultPeopleDetector() [Documentation Link](https://docs.opencv.org/4.5.3/d5/d33/structcv_1_1HOGDescriptor.html#a9c7a0b2aa72cf39b4b32b3eddea78203)
+  - Firstly, we use a pretrained HoG detector (trained on the INRIA dataset as per the original paper [Histograms of Oriented Gradients for Human Detection](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=1467360)). For this, we use OpenCV’s [HOGDescriptor()](https://docs.opencv.org/2.4/modules/gpu/doc/object_detection.html) with [getDefaultPeopleDetector()](https://docs.opencv.org/4.5.3/d5/d33/structcv_1_1HOGDescriptor.html#a9c7a0b2aa72cf39b4b32b3eddea78203)
 
   - Next, we extract HoG features using [skimage's HoG feature extractor](https://scikit-image.org/docs/stable/auto_examples/features_detection/plot_hog.html) and train our own SVM classifier on top of it. For this, prepare the training data with positive and negative samples for SVM.
 
