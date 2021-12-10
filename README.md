@@ -16,9 +16,11 @@ This repo uses OpenCV to do template tracking using 2 methods:
 The dataset used is "PennFudanPed" and can be downloaded from [here](https://www.cis.upenn.edu/~jshi/ped_html) and can be stored in PennFudanPed folder
 
 ### Using This Repo  ###
-1. Download PennFudanPed dataset and put in [PennFudanPed](https://github.com/abdur75648/Pedestrian-Detection/tree/main/PennFudanPed) folder
-2. Install required python packages using: ` pip install -r requirements.txt `
-3. Run any of the three scripts using the corresponding command:
+* Download PennFudanPed dataset and put in [PennFudanPed](https://github.com/abdur75648/Pedestrian-Detection/tree/main/PennFudanPed) folder
+* Install required python packages using: ` pip install -r requirements.txt `
+
+#### Detection ####
+* Run any of the three scripts using the corresponding command:
 
     ` python hog_pretrained.py -i PennFudanPed --vis `,
 
@@ -27,3 +29,12 @@ The dataset used is "PennFudanPed" and can be downloaded from [here](https://www
     ` python faster_rcnn.py -i PennFudanPed --vis `,
   
   where -i is dataset folder path. Add --vis to visualize detections
+  
+#### Evalutaion ####
+* The following metrics have been provided for evaluation:
+  - Average Precision (AP): AP evaluated and averaged over 10 IoU thresholds of .50:.05:.95
+  - Average Recall (AR): AR averaged over IoUs and evaluated at 1 and 10 detections per image.
+
+* Results can be evaluated using evaluation script provided. Use the command:
+ 
+    ` python evaluate_detections.py --gt <path to ground truth annotations json> --pred <path to detections json> `
