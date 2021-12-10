@@ -18,8 +18,12 @@ The dataset used is "PennFudanPed" and can be downloaded from [here](https://www
 ### Using This Repo  ###
 1. Download PennFudanPed dataset and put in [PennFudanPed](https://github.com/abdur75648/Pedestrian-Detection/tree/main/PennFudanPed) folder
 2. Install required python packages using: ` pip install -r requirements.txt `
-3. Run any of the three scripts:
+3. Run any of the three scripts using the corresponding command:
 
-    ` python eval.py --pred_path datasetname/result --gt_path datasetname/groundtruth`,
+    ` python hog_pretrained.py -i PennFudanPed --vis `,
+
+    ` python hog_custom.py -i PennFudanPed --vis `,
+
+    ` python faster_rcnn.py -i PennFudanPed --vis `,
   
-  where all the arguments are self-explanatory
+  where -i is dataset folder path. Add --vis to visualize detections
