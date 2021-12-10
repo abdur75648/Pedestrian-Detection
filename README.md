@@ -22,11 +22,11 @@ The dataset used is "PennFudanPed" and can be downloaded from [here](https://www
 #### Detection ####
 * Run any of the three scripts using the corresponding command:
 
-    ` python hog_pretrained.py -i PennFudanPed --vis `,
+    - [hog_pretrained.py](https://github.com/abdur75648/Pedestrian-Detection/blob/main/hog_pretrained.py) : ` python hog_pretrained.py -i PennFudanPed --vis `,
 
-    ` python hog_custom.py -i PennFudanPed --vis `,
+    - [hog_custom.py](https://github.com/abdur75648/Pedestrian-Detection/blob/main/hog_custom.py) : ` python hog_custom.py -i PennFudanPed --vis `,
 
-    ` python faster_rcnn.py -i PennFudanPed --vis `,
+    - [faster_rcnn.py](https://github.com/abdur75648/Pedestrian-Detection/blob/main/faster_rcnn.py) : ` python faster_rcnn.py -i PennFudanPed --vis `,
   
   where -i is dataset folder path. Add --vis to visualize detections
   
@@ -35,6 +35,6 @@ The dataset used is "PennFudanPed" and can be downloaded from [here](https://www
   - Average Precision (AP): AP evaluated and averaged over 10 IoU thresholds of .50:.05:.95
   - Average Recall (AR): AR averaged over IoUs and evaluated at 1 and 10 detections per image.
 
-* Results can be evaluated using evaluation script provided. Use the command:
+* Results can be evaluated using [evaluation script](https://github.com/abdur75648/Pedestrian-Detection/blob/main/evaluate_detections.py) provided. Use the command:
  
     ` python evaluate_detections.py --gt <path to ground truth annotations json> --pred <path to detections json> `
