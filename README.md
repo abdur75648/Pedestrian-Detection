@@ -1,5 +1,6 @@
 # Pedestrian-Detection
 Given an input image which may contain multiple pedestrians, a pedestrian detection system detects each person and returns a bounding box for each detection
+
 ![image](https://user-images.githubusercontent.com/66300465/145832492-76d97fe6-bd2d-4b57-94f7-e5c40dce35ca.png)
 
 This repo uses OpenCV to do template tracking using 2 methods:
